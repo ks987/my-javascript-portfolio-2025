@@ -1,0 +1,56 @@
+.AboutAndContact {
+    padding: 0;
+    margin: 0 auto;
+    border: none;
+    width: 90%;
+    max-width: 1200px; 
+    font-size: 18px;
+    color: var(--black);
+}
+
+.AboutAndContact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border: none;
+    background: var(--white);
+    margin: 0 auto;
+    padding: 0;
+    max-width: 800px;
+}
+
+.AboutAndContact-info {
+    width: 90%;
+    border: 2px solid var(--purple);
+    margin: 5px auto;
+    border: none;
+}
+
+.AboutAndContact-title {
+    font-size: 28px;
+}
+
+.AboutAndContact-info a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.AboutAndContact-info a:hover {
+    text-decoration: underline;
+    font-weight: 900;
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+
+
+}
+
+@media screen and (max-width: 450px) {
+    
+
+
+};

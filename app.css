@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Benne&family=Jost:ital,wght@0,100..900;1,100..900&family=Oxygen:wght@300;400;700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* fonts to pick from 
+- Sour Gummy
+- Jost
+- Oxygen
+- Benne
+ */
+
+:root {
+    /* Theme E */
+    --bright-purple: #b852fc;
+    --purple: #b191ff;
+    --dark-purple: #7b69a9;
+
+    --very-dark-purple: #4f426e;
+    --light-purple: #e8dfff;
+    --sand: #ffc65e;
+
+    --whitesmoke: #f5f5f5;
+    --white: #fff;
+    --black: #222;
+    --medium-gray: #bbb;
+    --light-gray: #eee;
+
+
+    /* Theme G */
+
+
+    /* shadows */
+
+    --shadow-1: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    /* Shadows */
+    --shadow-light: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    --main-text-shadow: 2px 2px 4px var(--black);
+}
