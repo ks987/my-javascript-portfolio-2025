@@ -3,6 +3,7 @@
     padding: 0;
     margin-top: 10px;
     color: var(--bright-purple);
+ 
     font-weight: bold;
     font-style: italic;
 }
@@ -17,6 +18,8 @@
     margin: 10px;
     padding: 3px 8px;
     border: 2px solid var(--bright-purple);
+    background: white;
+    color: #222;
 }
 
 

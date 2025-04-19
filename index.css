@@ -68,6 +68,9 @@ html, body {
     background: linear-gradient(45deg, var(--purple), var(--light-purple));
     background: var(--whitesmoke);
     background: var(--white);
+    color: #222;
+    background: #222;
+    color: white;
     line-height: 1.5;
     font-weight: 400;
     overflow: auto;
