@@ -1,6 +1,10 @@
 const allArtContainer = document.querySelector('.all-art-container');
 
 const aiArtArray = [
+
+    '../images/food/chatGPT-CAVA-style-plant-based-meal.PNG',
+    '../images/food/chatGPT-plant-based-dessert.png',
+
     '../images/chatgpt-fruits-image.png',
     '../images/chatgpt-mushroom-in-a-jar-image.png',
     '../images/chatgpt-summer-morning-image.png',
@@ -9,6 +13,7 @@ const aiArtArray = [
     '../images/chatgpt-modern-living-room.png',
     '../images/chatgpt-skyscrapers.png',
     '../images/chatpgt-cute-cartoonish-hamster.png'
+
 
 ];
 

@@ -51,6 +51,7 @@ function createAudioElement(src, index) {
     audioID.textContent = `Notebook LM podcast # ${index + 1}`;
 
     const audioTitle = document.createElement('div');
+    audioTitle.classList.add('audio-title');
     audioTitle.textContent = src;
     audioTitle.textContent = src.substr(10, 350);
     audioTitle.textContent = src.substring(src.lastIndexOf('/') + 1);
@@ -69,9 +70,7 @@ function createAudioElement(src, index) {
     audioDiv.appendChild(audioTitle);
     audioDiv.appendChild(audioFileWrapper);
 
-
     return audioDiv;
-
 }
 
 function addAudioFiles() {
@@ -80,7 +79,25 @@ function addAudioFiles() {
         allPodcastsContainer.appendChild(audioElement);
 
     })
-
 }
 
+
 addAudioFiles();
+
+// search bar functionality
+const searchInput = document.getElementById('search-input');
+const audioTitles = document.querySelectorAll('.audio-title');
+
+searchInput.addEventListener('input', function() {
+    const searchText = this.value.toLowerCase();
+
+    audioDivs.forEach(item => {
+        const title = item.dataset.title.toLowerCase();
+        if(this.title.includes(searchText)) {
+          item.style.display = '';
+         }else {
+             item.style.display = 'none';
+         }
+            });
+});
+
