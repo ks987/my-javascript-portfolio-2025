@@ -32,17 +32,49 @@
 audio {
     width: 90%;
 }
+.audio-title {
+    font-size: 16px;
+    color: var(--bright-purple);
+}
+
 
 .ai-library-top-bar-tools {
     margin: 0 auto 10px auto;
     border: 2px solid var(--sand);
-    width: 300px;
+    width: 340px;
+    width: 60%;
     height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--purple);
 }
 
-.audio-title {
-    font-size: 16px;
-    color: var(--bright-purple);
+.ai-library-search-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#ai-library-search {
+    display: inline-block;
+    min-width: 200px;
+    width: 85%;
+    height: 30px;
+    border: 1px solid #ddd;
+    color: var(--purple);
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.hide-audio-div {
+    display: none;
 }
 
 @media screen and (max-width: 450px) { 

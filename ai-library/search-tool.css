@@ -1,0 +1,43 @@
+.search-box {
+    margin: 10px auto;
+    width: 250px;
+}
+
+.colors-search-bar {
+    width: 250px;
+    height: 30px;
+}
+
+
+input:focus {
+    outline: none;
+}
+
+
+
+.colors-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid #ddd;
+
+}
+
+.color-name {
+    margin: 10px;
+    border: 1px solid #222;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+}
+
+.color-name:hover {
+    border: 1px solid gold;
+    cursor: pointer;
+}
+
+.hide-item {
+    display: none;
+}

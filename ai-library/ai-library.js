@@ -8,38 +8,45 @@ const notebookLMpodcasts = [
     '../sounds/for-coding-NotebookLM-audio/Quantum-Mechanics-Notebook-LM.wav',
 
     // 
-     '../sounds/for-coding-NotebookLM-audio/communication-skills-notebook-lm-podcast.wav',
-     '../sounds/for-coding-NotebookLM-audio/Culture-of-the-United-States-notebook-lm-podcast.wav',
-     '../sounds/for-coding-NotebookLM-audio/France-as-a-country-notebook-lm-podcast.wav',
-     '../sounds/for-coding-NotebookLM-audio/France-culture-notebook-LM-podcast.wav',
-     '../sounds/for-coding-NotebookLM-audio/French-cuisine-notebook-lm-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/communication-skills-notebook-lm-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/Culture-of-the-United-States-notebook-lm-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/France-as-a-country-notebook-lm-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/France-culture-notebook-LM-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/French-cuisine-notebook-lm-podcast.wav',
 
 
-     '../sounds/for-coding-NotebookLM-audio/Human-Brain-notebook-LM-podcast.wav',
-     '../sounds/for-coding-NotebookLM-audio/jules-verne-around-the-world-in-80-days-notebook-lm-podcast.wav',
-     '../sounds/for-coding-NotebookLM-audio/Language-learning-notebook-LM-podcast.wav',
-     '../sounds/for-coding-NotebookLM-audio/longevity-notebook-lm-podcast.wav',
-     '../sounds/for-coding-NotebookLM-audio/Louvre-notebook-LM-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/Human-Brain-notebook-LM-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/jules-verne-around-the-world-in-80-days-notebook-lm-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/Language-learning-notebook-LM-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/longevity-notebook-lm-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/Louvre-notebook-LM-podcast.wav',
 
 
-     '../sounds/for-coding-NotebookLM-audio/memory-and-learning-notebook-lm-podcast.wav',
-     '../sounds/for-coding-NotebookLM-audio/memory-short-term-long-term-notebook-lm-podcast.wav',
-     '../sounds/for-coding-NotebookLM-audio/musketeers-fiction-notebook-LM-podcast.wav',
-     '../sounds/for-coding-NotebookLM-audio/Neuroscience-health-Notebook-LM_podcast.wav',
-     '../sounds/for-coding-NotebookLM-audio/notebook-LM-enchiridion-epictetus.wav',
+    '../sounds/for-coding-NotebookLM-audio/memory-and-learning-notebook-lm-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/memory-short-term-long-term-notebook-lm-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/musketeers-fiction-notebook-LM-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/Neuroscience-health-Notebook-LM_podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/notebook-LM-enchiridion-epictetus.wav',
 
-     '../sounds/for-coding-NotebookLM-audio/Notebook-LM-history-of-Greece.wav',
-     '../sounds/for-coding-NotebookLM-audio/Notebook-LM-The-Great-Pizza-Heist.wav',
-     '../sounds/for-coding-NotebookLM-audio/Rousseau-confessions-notebook-LM.wav',
-     '../sounds/for-coding-NotebookLM-audio/smartphone-science-notebook-LM-podcast.wav',
-     '../sounds/for-coding-NotebookLM-audio/software-engineering-news-notebook-LM-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/Notebook-LM-history-of-Greece.wav',
+    '../sounds/for-coding-NotebookLM-audio/Notebook-LM-The-Great-Pizza-Heist.wav',
+    '../sounds/for-coding-NotebookLM-audio/Rousseau-confessions-notebook-LM.wav',
+    '../sounds/for-coding-NotebookLM-audio/smartphone-science-notebook-LM-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/software-engineering-news-notebook-LM-podcast.wav',
 
-     '../sounds/for-coding-NotebookLM-audio/Subatomic-particles-notebook-LM-podcast.wav',
-     '../sounds/for-coding-NotebookLM-audio/Sweden-notebook-lm-podcast.wav',
-     '../sounds/for-coding-NotebookLM-audio/United-States-as-a-country-notebook-lm-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/Subatomic-particles-notebook-LM-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/Sweden-notebook-lm-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/United-States-as-a-country-notebook-lm-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/plant-and-tree-notebook-LM-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/sugar-notebook-LM-podcast.wav'
 
 ];
 
+
+
+
+
+// to create audio element
 
 
 function createAudioElement(src, index) {
@@ -53,8 +60,10 @@ function createAudioElement(src, index) {
     const audioTitle = document.createElement('div');
     audioTitle.classList.add('audio-title');
     audioTitle.textContent = src;
-    audioTitle.textContent = src.substr(10, 350);
-    audioTitle.textContent = src.substring(src.lastIndexOf('/') + 1);
+    audioTitle.textContent = src.replace('../sounds/for-coding-NotebookLM-audio/', '').replace('.wav', '');
+
+
+    // to add audio file wrapper and audio file itself
 
     const audioFileWrapper = document.createElement('audio');
     audioFileWrapper.controls = true;
@@ -84,20 +93,47 @@ function addAudioFiles() {
 
 addAudioFiles();
 
-// search bar functionality
-const searchInput = document.getElementById('search-input');
+
+
+
+const aiLibrarySearch = document.querySelector('#ai-library-search');
+const audioDivs = document.querySelectorAll('.audio-div');
 const audioTitles = document.querySelectorAll('.audio-title');
 
-searchInput.addEventListener('input', function() {
-    const searchText = this.value.toLowerCase();
-
-    audioDivs.forEach(item => {
-        const title = item.dataset.title.toLowerCase();
-        if(this.title.includes(searchText)) {
-          item.style.display = '';
-         }else {
-             item.style.display = 'none';
-         }
-            });
+aiLibrarySearch.addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    audioDivs.forEach(audioDiv => {
+        const text = audioDiv.textContent.toLowerCase();
+        audioDiv.classList.toggle('hide-audio-div', !text.includes(query));
+    });
 });
+
+
+
+
+
+// 
+// search bar functionality WRONG
+// const aiLibrarySearch = document.getElementById('ai-library-search');
+
+
+// searchInput.addEventListener('input', function() {
+//     const searchText = this.value.toLowerCase();
+//     const audioTitles = document.querySelectorAll('.audio-title');
+
+//     audioTitles.forEach(item => {
+//         const title = item.dataset.title.toLowerCase();
+//         const parentDiv = item.closest('.audio-div');
+//         // item.textContent = src.substring(src.lastIndexOf('/') + 1);
+//         // item.dataset.title = item.textContent; 
+
+//         if(title.includes(searchText)) {
+//           parentDiv.style.display = '';
+//          }else {
+//              parentDiv.style.display = 'none';
+//          }
+//     });
+// });
+
+
 
