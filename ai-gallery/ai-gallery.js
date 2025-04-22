@@ -2,24 +2,21 @@ const allArtContainer = document.querySelector('.all-art-container');
 
 const aiArtArray = [
 
-    '../images/food/chatGPT-CAVA-style-plant-based-meal.PNG',
-    '../images/food/chatGPT-plant-based-dessert.png',
-
-    '../images/chatgpt-fruits-image.png',
-    '../images/chatgpt-mushroom-in-a-jar-image.png',
-    '../images/chatgpt-summer-morning-image.png',
-    '../images/chatgpt-cartoonish-house-1.png',
-    '../images/chatgpt-flower-field.png',
-    '../images/chatgpt-modern-living-room.png',
-    '../images/chatgpt-skyscrapers.png',
-    '../images/chatpgt-cute-cartoonish-hamster.png'
-
-
+    '../images/food/chatGPT-plant-based-dish-2.PNG',
+    '../images/food/chatGPT-dessert-screenshot.png',
+    '../images/food/chatgpt-breakfast-dish-1.png',
+    '../images/food/chatgpt-lunch-dish-2.png',
+    '../images/food/chatgpt-lunch-dish-1.png',
+    '../images/food/chatgpt-smoothie-1.png'
 ];
 
 
+
+
 function createArtworkElement(src, index) {
-    const artworkDiv = document.createElement('div');
+
+    const artworkDiv = document.createElement('a');
+    artworkDiv.href = './generate-text.html';
     artworkDiv.classList.add("ai-artwork-div");
 
     const labelDiv = document.createElement('div');

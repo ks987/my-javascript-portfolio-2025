@@ -1,0 +1,50 @@
+
+
+.generate-text-container {
+    border: none;
+    background: #494949;
+    height: 2000px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  
+}
+embed {
+    display: block;
+    margin: 0 auto;
+}
+
+.close-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.close-btn {
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    width: 55px;
+    height: 55px;
+    border: none;
+    background: #494949;
+    display: flex;
+    justify-self: right;
+    margin: 6px 3px;
+
+}
+
+.close-btn:hover {
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.text-title {
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-size: 20px;
+}
+
+.text-file {
+    width: 80%;
+}
