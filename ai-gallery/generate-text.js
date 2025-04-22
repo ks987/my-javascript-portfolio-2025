@@ -1,45 +1,38 @@
+
+
 const container = document.querySelector('.generate-text-container');
 
-const arrayOfPoems = [
-    '../files-for-reading/chatGPT-Falafel-Fiesta-A-Bowl-Drama.pdf',
-  '../files-for-reading/chatGPT-Ode-to-the-Strawberry-Choco-Supreme.pdf',
-  '../files-for-reading/chatGPT-Ode-to-the-Oaty-Beast--a-Very-Nutty-Tale.pdf',
-  '../files-for-reading/chatGPT-Ode-to-a-Bowl-of-Chaos.pdf',
-  '../files-for-reading/chatGPT-Ode-to-a-Bowl-of-Beans-and-Greens.pdf',
-'../files-for-reading/chatGPT-Ode-to-a-Tropical-Smoothie-Supreme.pdf'
-];
+function getPoemFileFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('poem');
+}
 
 
-function createTextElement(src, index) {
-const smallContainer = document.createElement('div');
-
-
-
+function displayPoem(poemPath) {
+    const smallContainer = document.createElement('div');
 
     const textTitle = document.createElement('div');
-    textTitle.textContent = src.substr(21, 350);
+    textTitle.textContent = poemPath.substr(21, 350).toLowerCase().replace('.pdf', '').replace('-', ' '); // shorten displayed name
     textTitle.classList.add('text-title');
 
-    
     const textFile = document.createElement('embed');
     textFile.classList.add('text-file');
-    textFile.src = src;
+    textFile.src = poemPath;
     textFile.type = 'application/pdf';
     textFile.width = '100%';
     textFile.height = '600px';
 
-
-smallContainer.appendChild(textTitle);
+    smallContainer.appendChild(textTitle);
     smallContainer.appendChild(textFile);
     container.appendChild(smallContainer);
+
 }
 
 
+//run the function
 
+const poemPath = getPoemFileFromURL();
 
-function addTextFile() {
-    arrayOfPoems.forEach((text, index) => {
-        const textElement = createTextElement(text, index);
-        container.appendChild(textElement);
-    })};
-
+if(poemPath) {
+    displayPoem(poemPath);
+}
