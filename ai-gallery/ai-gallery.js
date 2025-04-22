@@ -2,21 +2,35 @@ const allArtContainer = document.querySelector('.all-art-container');
 
 const aiArtArray = [
 
-    '../images/food/chatGPT-plant-based-dish-2.png',
-    '../images/food/chatGPT-dessert-screenshot.png',
-    '../images/food/chatgpt-breakfast-dish-1.png',
-    '../images/food/chatgpt-lunch-dish-2.png',
-    '../images/food/chatgpt-lunch-dish-1.png',
-    '../images/food/chatgpt-smoothie-1.png'
+    '../images/food/chatgpt-mediterrarean-bowl.png',
+
+    '../images/food/chatgpt-dessert.png',
+
+    '../images/food/chatgpt-oatmeal.png',
+
+    '../images/food/chatgpt-breakfast.png',
+
+    '../images/food/chatgpt-burrito-bowl.png',
+
+    '../images/food/chatgpt-tropical-smoothie.png'
 ];
 
 const arrayOfPoems = [
-    '../files-for-reading/chatGPT-Falafel-Fiesta-A-Bowl-Drama.pdf',
-  '../files-for-reading/chatGPT-Ode-to-the-Strawberry-Choco-Supreme.pdf',
-  '../files-for-reading/chatGPT-Ode-to-the-Oaty-Beast--a-Very-Nutty-Tale.pdf',
-  '../files-for-reading/chatGPT-Ode-to-a-Bowl-of-Chaos.pdf',
-  '../files-for-reading/chatGPT-Ode-to-a-Bowl-of-Beans-and-Greens.pdf',
-'../files-for-reading/chatGPT-Ode-to-a-Tropical-Smoothie-Supreme.pdf'
+    '../files-for-reading/chatgpt-mediterranean-bowl-advertisement.pdf',
+
+
+
+    '../files-for-reading/chatgpt-dessert-advertisement.pdf',
+
+
+  '../files-for-reading/chatgpt-oatmeal-advertisement.pdf',
+
+
+  '../files-for-reading/chatgpt-breakfast-advertisement.pdf',
+
+  '../files-for-reading/chatgpt-burrito-bowl-advertisement.pdf',
+
+'../files-for-reading/chatgpt-tropical-smoothie-advertisement.pdf'
 ];
 
 
