@@ -5,8 +5,13 @@ font-weight: bold;
 }
 
 
+.notepad-app-title span {
+    font-style: italic;
+    font-weight: normal;
+}
+
 .notepad-container {
-    width: 400px;
+    width: 280px;
     border: 2px solid var(--purple);
     margin: 0 auto;
     display: flex;
@@ -17,7 +22,7 @@ font-weight: bold;
 
 .notepad-title-input {
     display: block;
-    width: 300px;
+    width: 200px;
     padding: 5px 10px;
     height: 30px;
     margin: 10px auto 0px auto;
@@ -25,10 +30,10 @@ font-weight: bold;
 }
 .notepad-textarea {
     margin: 0 auto;
-    min-width: 300px;
-    max-width: 300px;
-    min-height: 300px;
-    max-height: 300px;
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 200px;
+    max-height: 200px;
     display: block;
     padding: 5px 10px;
     border: 1px solid var(--medium-gray);
@@ -53,5 +58,36 @@ font-weight: bold;
 .notepad-save-btn:hover {
     cursor: pointer;
     transform: scale(0.97);
+}
+
+.created-notes-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.one-note {
+    width: 250px;
+    height: 200px;
+    overflow-x: hidden;
+    border: 1px solid var(--sand);
+    padding: 5px;
+    margin: 5px;
+}
+
+.one-note:hover {
+    cursor: pointer;
+    background: var(--sand);
+}
+
+.one-note-title {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--bright-purple);
+}
+
+.one-note-description {
+    font-size: 16px;
+    font-style: italic;
+    color: var(--purple);
 }
 

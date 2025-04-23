@@ -68,3 +68,18 @@
     
 
 }
+
+@media screen and (max-width: 350px) { 
+    .portfolio-title {
+       font-size: 14px;
+    }
+
+    .portfolio-navbar-itself div {
+       font-size: 14px;
+       padding: 3px 2px;
+       margin: 3px 5px;
+    }
+    
+
+
+}
