@@ -38,7 +38,11 @@ const notebookLMpodcasts = [
     '../sounds/for-coding-NotebookLM-audio/Sweden-notebook-lm-podcast.wav',
     '../sounds/for-coding-NotebookLM-audio/United-States-as-a-country-notebook-lm-podcast.wav',
     '../sounds/for-coding-NotebookLM-audio/plant-and-tree-notebook-LM-podcast.wav',
-    '../sounds/for-coding-NotebookLM-audio/sugar-notebook-LM-podcast.wav'
+    '../sounds/for-coding-NotebookLM-audio/sugar-notebook-LM-podcast.wav',
+
+    '../sounds/for-coding-NotebookLM-audio/Milan-Italy-NotebookLM-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/Italian-culture-and-traditions-Notebook-LM-podcast.wav',
+    '../sounds/for-coding-NotebookLM-audio/History-of-Italy-Notebook-LM-podcast.wav'
 
 ];
 
