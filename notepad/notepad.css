@@ -1,0 +1,57 @@
+.notepad-app-title {
+font-size: 20px;
+text-align: center;
+font-weight: bold;
+}
+
+
+.notepad-container {
+    width: 400px;
+    border: 2px solid var(--purple);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+
+}
+
+.notepad-title-input {
+    display: block;
+    width: 300px;
+    padding: 5px 10px;
+    height: 30px;
+    margin: 10px auto 0px auto;
+    border: 1px solid var(--medium-gray);
+}
+.notepad-textarea {
+    margin: 0 auto;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 300px;
+    max-height: 300px;
+    display: block;
+    padding: 5px 10px;
+    border: 1px solid var(--medium-gray);
+}
+
+
+
+.notepad-save-btn {
+    display: block;
+    margin: 5px auto;
+    width: 150px;
+    height: 50px;
+    border: none;
+    background: var(--sand);
+    border: 2px solid var(--purple);
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--white);
+}
+
+
+.notepad-save-btn:hover {
+    cursor: pointer;
+    transform: scale(0.97);
+}
+
