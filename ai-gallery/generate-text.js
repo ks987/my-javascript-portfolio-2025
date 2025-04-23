@@ -2,28 +2,28 @@
 
 const container = document.querySelector('.generate-text-container');
 
-function getPoemFileFromURL() {
+function getTextFileFromURL() {
     const params = new URLSearchParams(window.location.search);
-    return params.get('poem');
+    return params.get('text');
 }
 
 
-function displayPoem(poemPath) {
+function displayText(textPath) {
     const smallContainer = document.createElement('div');
 
     const textTitle = document.createElement('div');
-    textTitle.textContent = poemPath.substr(21, 350).toLowerCase().replace('.pdf', '').replace('-', ' '); // shorten displayed name
+    textTitle.textContent = textPath.substr(21, 350).toLowerCase().replace('.pdf', '').replace('-', ' '); // shorten displayed name
     textTitle.classList.add('text-title');
 
-    const textFile = document.createElement('embed');
-    textFile.classList.add('text-file');
-    textFile.src = poemPath;
-    textFile.type = 'application/pdf';
-    textFile.width = '100%';
-    textFile.height = '600px';
+    const textContent = document.createElement('embed');
+    textContent.classList.add('text-file');
+    textContent.src = textPath;
+    textContent.type = 'application/pdf';
+    textContent.width = '100%';
+    textContent.height = '600px';
 
     smallContainer.appendChild(textTitle);
-    smallContainer.appendChild(textFile);
+    smallContainer.appendChild(textContent);
     container.appendChild(smallContainer);
 
 }
@@ -31,8 +31,8 @@ function displayPoem(poemPath) {
 
 //run the function
 
-const poemPath = getPoemFileFromURL();
+const itemPath = getTextFileFromURL();
 
-if(poemPath) {
-    displayPoem(poemPath);
+if(itemPath) {
+    displayText(itemPath);
 }
