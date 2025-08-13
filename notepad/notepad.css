@@ -1,7 +1,7 @@
 .notepad-app-title {
-font-size: 20px;
-text-align: center;
-font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
 }
 
 
@@ -10,15 +10,51 @@ font-weight: bold;
     font-weight: normal;
 }
 
+
+.notepad-and-created-notes {
+    display: flex;
+    justify-content: center;
+}
+
+
 .notepad-container {
-    width: 280px;
+    max-width: 280px;
+    min-width: 280px;
     border: 2px solid var(--purple);
-    margin: 0 auto;
+    margin: 5px;
+    margin-left: 15px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
+}
+
+
+.clear-storage-btn {
+    display: block;
+    margin: 5px auto 15px auto;
+    width: 150px;
+    height: 30px;
+    border: none;
+    background: var(--medium-gray);
+    border: 2px solid var(--medium-gray);
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--white);
+}
+
+.clear-storage-btn:hover {
+    transform: scale(0.97);
+    cursor: pointer;
+    border: 2px solid var(--purple);
+    background: var(--sand);
 
 }
+
+.created-notes-box {
+    margin: 5px auto;
+    width: 70%;
+}
+
 
 .notepad-title-input {
     display: block;
@@ -28,6 +64,8 @@ font-weight: bold;
     margin: 10px auto 0px auto;
     border: 1px solid var(--medium-gray);
 }
+
+
 .notepad-textarea {
     margin: 0 auto;
     min-width: 200px;
@@ -81,7 +119,9 @@ font-weight: bold;
 
 .one-note-title {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
     color: var(--bright-purple);
 }
 
@@ -91,3 +131,47 @@ font-weight: bold;
     color: var(--purple);
 }
 
+
+.note-edit-button {
+
+border: 2px solid gold;
+margin: 5px;
+background: white;
+
+}
+
+
+
+.note-edit-button:hover {
+
+}
+
+
+
+.note-delete-button {
+
+border: 2px solid gold;
+margin: 5px;
+background: white;
+}
+
+
+
+.note-delete-button:hover {
+
+}
+
+
+
+@media screen and (max-width: 570px) {
+    .notepad-and-created-notes {
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .notepad-container {
+        margin: 5px auto;
+    }
+
+}
